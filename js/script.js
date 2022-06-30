@@ -35,9 +35,19 @@ for (let i = 1; i <= gridCells; i++) {
     const cell = document.createElement('div')
     grid.appendChild(cell)
     cell.className = 'cell'
+    
     // #MILESTONE 3
     // In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
     cell.innerText = [i]
+
+    // #MILESTONE 4
+    // Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
+    cell.addEventListener('click', function () {
+        cell.classList.add('clicked')
+        cell.innerText = '';
+        console.log(i)
+    })
+
 }
 
 
